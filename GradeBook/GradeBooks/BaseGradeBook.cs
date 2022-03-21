@@ -9,15 +9,24 @@ using Newtonsoft.Json.Linq;
 
 namespace GradeBook.GradeBooks
 {
+
     public class BaseGradeBook
     {
+
+        public GradeBookType Type { get; set; }
+
         public string Name { get; set; }
         public List<Student> Students { get; set; }
+
+        public BaseGradeBook(string name, bool isWeighted)
+        {
+            Name = name;
+            Students = new List<Student>();
+        }
 
         public BaseGradeBook(string name)
         {
             Name = name;
-            Students = new List<Student>();
         }
 
         public void AddStudent(Student student)
