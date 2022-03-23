@@ -24,6 +24,11 @@ namespace GradeBook.GradeBooks
             Students = new List<Student>();
         }
 
+        public BaseGradeBook(string name, object weighed)
+        {
+            Name = name;
+        }
+
         public BaseGradeBook(string name)
         {
             Name = name;
